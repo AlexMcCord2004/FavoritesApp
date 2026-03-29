@@ -3,7 +3,7 @@
 //
 // Copyright © 2025 Auburn University.
 // All Rights Reserved.
-
+//
 
 import SwiftUI
 
@@ -11,7 +11,6 @@ enum ContentCategory : String, CaseIterable {
     case cities = "Cities"
     case hobbies = "Hobbies"
     case books = "Books"
-    
 }
 
 struct HomeView: View {
@@ -45,9 +44,10 @@ struct HomeView: View {
             CitiesView(searchText: $searchText)
         } else if selectedCategory == .hobbies {
             HobbiesView(searchText: $searchText)
+        } else if selectedCategory == .books {
+            BooksView(searchText: $searchText)
         }
     }
-    
 }
 
 #Preview {
